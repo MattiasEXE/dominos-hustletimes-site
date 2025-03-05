@@ -1,0 +1,174 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items horizontally */
+}
+
+/* Center the main heading */
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+    color: #004085;
+}
+
+/* Center the section headings */
+h2 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.75em;
+    color: #004085;
+}
+
+/* Instructions paragraph */
+p {
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Form container styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; /* Make form responsive */
+}
+
+/* Label and input styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"],
+button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #004d99;
+}
+
+/* Driver table styling */
+table {
+    width: 100%;
+    max-width: 800px; /* Limit the width for better readability */
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #0066cc;
+    color: white;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+/* Alternate row colors for readability */
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect on table rows */
+tr:hover td {
+    background-color: #e6f7ff;
+}
+
+/* Centering the table */
+.table-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Flex container for forms and table */
+.forms-table-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Make forms and table responsive */
+@media (max-width: 768px) {
+    .forms-table-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form, table {
+        width: 100%; /* Make both form and table take full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"],
+    input[type="submit"],
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+}
