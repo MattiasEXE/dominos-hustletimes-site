@@ -1,7 +1,9 @@
 # Dominos Hustle-Times Leaderboard site
 
 This is a site that can show a leaderboard for hustle times for dominos drivers. It retrieves the leaderboard from a [SQL-database](#database-structure)
-You can upload new times on the [generate.php page](#Generate-page).
+You can upload new times on the [generate.php page](#generate-page).
+
+I started a few test to automate the generation of the leaderboard using selenium: jump to [automation](#automation-using-selenium)
 
 ## Database structure
 You should create a file called 'database.php' to add the database login variables ($servername, $username, $password, $dbname).
@@ -18,7 +20,7 @@ id: entry identifier. Not used.<br>
 name: driver ID, 4-digit code used by PULSE to identify driver.<br>
 time: avg hustle time this week.<br>
 percentage: avg percentage of app usage this week.<br>
-points_this_week: points aquired this week. Calculated during the upload (see [Generate page](#Generate-page)).<br>
+points_this_week: points aquired this week. Calculated during the upload (see [Generate page](#generate-page)).<br>
 total_points: the total points this driver had during this week.<br>
 
 ## Generate page
@@ -73,3 +75,13 @@ If you make a mistake you can remove it again.
 
 ### Reset points
 This button resets all points in the [drivers table](#driversid-name-points).
+
+# Automation using Selenium
+***UNFINISHED***
+The goal of this pythonscript is to retrieve the daily store report from the powerBI database, and extract the relevant hustle times and percentages to generate the leaderboard automatically.
+
+You could set up a server that runs this script every week (e.g. as a cron job), so the leaderboard stays up to date.
+
+Save the login-details for the PowerBI reports site in the "PowerBIPassword.py" file.
+
+
